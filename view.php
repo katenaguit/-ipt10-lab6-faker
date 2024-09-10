@@ -5,12 +5,10 @@ require_once 'FileUtility.php';
 $filename = 'persons.csv';
 $data = FileUtility::openFile($filename);
 
-// Convert CSV data to an array
 $lines = explode("\n", trim($data));
 $header = str_getcsv(array_shift($lines));
 $rows = array_map('str_getcsv', $lines);
 
-// Display in HTML table
 echo '<!DOCTYPE html>
 <html lang="en">
 <head>
