@@ -1,6 +1,6 @@
 <?php
 
-require_once 'vendor/autoload.php'; // Load FakerPHP
+require_once 'vendor/autoload.php'; 
 
 use Faker\Factory;
 
@@ -8,7 +8,7 @@ class Random {
     private $faker;
 
     public function __construct() {
-        $this->faker = Factory::create('en_PH'); // Initialize Faker with Filipino locale
+        $this->faker = Factory::create('en_PH'); 
     }
 
     public function generatePerson() {
@@ -18,12 +18,12 @@ class Random {
             'First Name' => $this->faker->firstName,
             'Last Name' => $this->faker->lastName,
             'Street Address' => $this->faker->streetAddress,
-            'Barangay' => $this->faker->streetName, // Adjust if necessary
+            'Barangay' => $this->faker->streetName, 
             'Municipality' => $this->faker->city,
             'Province' => $this->faker->state,
             'Country' => $this->faker->country,
             'Phone Number' => $this->faker->phoneNumber,
-            'Mobile Number' => $this->faker->phoneNumber, // Assuming mobile number is similar to phone number
+            'Mobile Number' => $this->faker->phoneNumber, 
             'Company Name' => $this->faker->company,
             'Company Website' => $this->faker->domainName,
             'Job Title' => $this->faker->jobTitle,
